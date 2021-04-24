@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(257, 40%, 49%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+}
+
+main {
+  margin-top: 3em;
+  width: 80%;
+  max-width: 500px;
+  height: 80vh;
+  position: relative;
+  min-width: 280px;
+}
+
+.logo {
+  max-width: 200px;
+  width: 40%;
+  height: auto;
+}
+
+.mocks {
+  margin: 2em 0;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+/* ----- Heading text and paragraphs ----- */
+.right {
+  text-align: center;
+  position: relative;
+
+  h3 {
+    padding: 0.5em 0 0.8em 0;
+    font-size: 1.5em;
+    font-family: "Poppins", sans-serif;
+  }
+  p {
+    font-weight: 400;
+    margin-bottom: 2em;
+    line-height: 1.7em;
+    font-size: 0.9em;
+    margin: 0 0.2em;
+  }
+
+  .icons {
+    gap: 1em;
+    display: flex;
+    justify-content: center;
+  }
+  i {
+    margin-top: 4em;
+    display: inline-block;
+    border-radius: 60px;
+    border: 1px solid white;
+    padding: 0.5em 0.6em;
+  }
+  div.cta {
+    position: relative;
+  }
+  button {
+    position: relative;
+    margin-top: 3em;
+    padding: 0.8em 5em;
+    border-radius: 35px;
+    border: none;
+    color: hsl(257, 40%, 49%);
+    font-family: "Poppins", sans-serif;
+    box-shadow: 5px 5px 5px -2px #333;
+  }
+  button:hover {
+    background-color: hsl(300, 69%, 71%);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .bg {
+    display: none;
+  }
+
+  body {
+    background-image: url(/images/bg-desktop.svg);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  main {
+    margin: 3em 5em;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+
+    .mocks {
+      margin-top: 5em;
+      max-width: 100%;
+    }
+
+    .left {
+      flex: 1.2;
+    }
+
+    .right {
+      flex: 0.8;
+      margin-left: 3.5em;
+      text-align: left;
+      max-height: 500px;
+      flex-direction: column;
+      top: 10em;
+
+      h3 {
+        font-size: 2.5em;
+      }
+
+      p {
+        padding-right: 0.2em;
+        font-size: 1em;
+      }
+      button {
+        font-size: 1.05em;
+        bottom: 1.8em;
+        box-shadow: 5px 5px 5px -2px #333;
+        padding: 1em 4em;
+      }
+      button:hover {
+        background-color: hsl(300, 69%, 71%);
+      }
+      .icons {
+        left: 12em;
+        top: 3em;
+        position: relative;
+      }
+    }
+  }
+}
